@@ -96,3 +96,43 @@ body{
   width: 450px; /* Cambia este valor según el tamaño deseado */
   margin: 0 10px; /* Ajusta este valor según el espacio deseado entre las imágenes */
 }
+/* Estilos para el menú desplegable */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333; /* Mismo color que la barra de navegación */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white; /* Color del texto igual al de los otros enlaces */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #555; /* Color de fondo al pasar el cursor igual al de los otros enlaces */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  background-color: #333; /* Mismo color que la barra de navegación */
+  color: white; /* Color del texto igual al de los otros enlaces */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 100px; /* Ajusta el margen izquierdo para que coincida con el de los otros enlaces */
+  margin-right: 100px; /* Ajusta el margen derecho para que coincida con el de los otros enlaces */
+}
