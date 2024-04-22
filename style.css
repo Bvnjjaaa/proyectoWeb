@@ -1,4 +1,9 @@
 *{
+  
+}
+
+body{
+  background-color: burlywood;
   margin: 0%;
 }
 
@@ -9,12 +14,12 @@
 }
 
 .rectangulo1 {
-  background-color: #555;
-  padding: 10px;
+  background-color: burlywood;
+  padding: 4px;
 }
 
 .rectangulo2 {
-  background-color: #777;
+  background-color: black;
   padding: 10px;
 }
 
@@ -57,18 +62,14 @@
   text-decoration: underline;
 }
 
-.colorfondo {
-  background-color: aqua;
-}
-
 .fotos {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px; /* Espacio entre filas */
+  margin: 44px;
 }
 
 .image {
-  width: calc(33.33% - 10px); /* Ajuste del ancho de las imágenes con margen entre ellas */
+  width: calc(33.33% - 10px);
 }
 
 .image img {
@@ -76,6 +77,4 @@
   height: 320px;
   display: block;
   margin-left: 90px;
-  margin-top: 18px;
-  margin-bottom: 20px;
 }
