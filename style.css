@@ -85,4 +85,14 @@ body{
 
 .clases{
   margin: 50px;
+
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  width: 450px; /* Cambia este valor según el tamaño deseado */
+  margin: 0 10px; /* Ajusta este valor según el espacio deseado entre las imágenes */
 }
