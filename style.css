@@ -14,7 +14,7 @@ body{
 }
 
 .rectangulo1 {
-  background-color: burlywood;
+  background-color: rgb(147 106 68);
   padding: 4px;
 }
 
@@ -77,4 +77,12 @@ body{
   height: 320px;
   display: block;
   margin-left: 90px;
+}
+
+.nosotros{
+  text-align: center;
+}
+
+.clases{
+  margin: 50px;
 }
