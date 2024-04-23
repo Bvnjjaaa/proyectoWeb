@@ -7,6 +7,10 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
   
   .rectangulo1 {
@@ -93,4 +97,15 @@ body{
     cursor: pointer;
     margin-left: 100px; /* Ajusta el margen izquierdo para que coincida con el de los otros enlaces */
     margin-right: 100px; /* Ajusta el margen derecho para que coincida con el de los otros enlaces */
+  }
+
+  .clases{
+    margin: 50px;
+  }
+  .clases h1{
+    text-align: center;
+  }
+  .cac{
+    margin-top: 160px;
+    text-align: center;
   }
