@@ -208,7 +208,7 @@ body{
   align-items: center;
 }
 .image {
-  width: 450px; /* Cambia este valor según el tamaño deseado */
+  width: 450px; /* Cambia este valor según el tamaño deseado en servicios*/
   margin: 0 10px; /* Ajusta este valor según el espacio deseado entre las imágenes */
 }
 /* Estilos para el menú desplegable */
@@ -338,64 +338,17 @@ h1 {
   padding-left: 20px;
   font-size: 18px;
 }
-
-/* imagen de fondo en sala de ensayo */
-body {
-  margin: 0;
-  padding: 0;
-}
-.background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('img/sala1.jpg'); /* Cambia 'img/background.jpg' por la ruta de tu imagen de fondo */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('img/sala1.jpg'); /* Cambia 'img/background.jpg' por la ruta de tu imagen de fondo */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.fotos {
+.text-columns {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* Ajusta el espacio entre las columnas */
+  margin-top: 20px; /* Ajusta la separación entre las imágenes y las columnas de texto */
 }
 
-.image {
-  width: 30%;
-  margin-bottom: 20px;
+.text-column {
+  width: 40%; /* Ajusta el ancho de cada columna */
+  text-align: center;
 }
 
-.info-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.info-column {
-  width: 45%;
-}
-
-.info-column h2 {
+.text-column h2 {
   margin-top: 0;
-}
-
-.info-column ul {
-  padding-left: 20px;
 }
