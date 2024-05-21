@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Estacion La Musa</title>
-    <link rel="stylesheet" href="css/menu.css">  
+    <link rel="stylesheet" href="css/index.css">  
 </head>
 <body>
     <div class="natbar">
-        <div class="rectangulo1">
+      <div class="rectangulo1">
           <div class="logo-titulo">
             <a href="index.html">
                 <img src="img/logo.png" alt="Descripción de la imagen">
@@ -70,28 +70,36 @@
   </div>
 </div>
 
-<div>
-  <h2>Formulario de Contacto</h2>
 
-<form action="#" method="post">
-  <label for="nombre">Nombre:</label><br>
-  <input type="text" id="nombre" name="nombre" required><br><br>
-  
-  <label for="apellido">Apellido:</label><br>
-  <input type="text" id="apellido" name="apellido" required><br><br>
-  
-  <label for="edad">Edad:</label><br>
-  <input type="number" id="edad" name="edad" required><br><br>
-  
-  <label for="numero">Número de teléfono:</label><br>
-  <input type="tel" id="numero" name="numero" pattern="[0-9]{10}" required><br><br>
-  
-  <label for="correo">Correo Electrónico:</label><br>
-  <input type="email" id="correo" name="correo" required><br><br>
-  
-  <input type="submit" value="Enviar">
-  <input type="reset" value="Borrar">
-</form>
-
-</div>
+  <h1 id="h1index">Formulario de Contacto</h1>
+  <div class="todo">
+    <div class="formulario">
+      <fieldset>
+      <legend>Tus datos</legend>
+      <form action="#" method="post" onsubmit="return validarFormulario()" autocomplete="on">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" pattern=".{3,15}" title="Debe tener entre 3 y 15 caracteres" placeholder="Ingrese su nombre" required><br><br>
+        
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" pattern=".{3,15}" title="Debe tener entre 3 y 15 caracteres" required><br><br>
+        
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" min="15" placeholder="Ingrese su edad" required><br><br>
+        
+        <label for="numero">Número de teléfono:</label><br>
+        <input type="tel" id="numero" name="numero" placeholder="Ingrese su numero" pattern="\+569\d{8}" title="Debe comenzar con +569 y tener 8 dígitos." required><br><br>
+        
+        <label for="correo">Correo Electrónico:</label><br>
+        <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required><br><br>
+        
+        <input class="boton" type="submit" value="Enviar">
+        <input class="boton" type="reset" value="Borrar">
+      </form>
+      </fieldset>
+    </div>
+    <p>En Estación La Musa, nos apasiona la música tanto como a ti. Si tienes preguntas sobre nuestros servicios, necesitas asesoramiento o simplemente quieres compartir tus pensamientos, estamos aquí para ayudarte.
+      <br><br> Nuestro equipo está comprometido a brindarte la mejor experiencia musical posible. Ya sea que estés interesado en nuestras clases de guitarra, necesites calibrar tus instrumentos o desees reservar nuestra sala de ensayo, estamos listos para responder cualquier pregunta que puedas tener.
+      <br><br> Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible. ¡Esperamos poder ayudarte a hacer realidad tus sueños musicales!</p>
+  </div>
+<script src="validacionform.js"></script>
 </html>
