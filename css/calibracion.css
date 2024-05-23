@@ -67,7 +67,7 @@ body{
   .maintenance-plan {
     width: calc(33% - 20px); /* Ajustar el ancho de las columnas según sea necesario */
     margin-bottom: 20px;
-    background-color: #f9f9f9;
+    background-color: rgb(201, 185, 160);
     padding: 20px;
     box-sizing: border-box;
   }

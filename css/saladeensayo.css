@@ -142,4 +142,44 @@ body{
     margin-top: 190px;
   }
 
+  .maintenance-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 9%;
+    margin-right: 12%;
+  }
+  
+  .maintenance-plan {
+    width: calc(33% - 20px); /* Ajustar el ancho de las columnas según sea necesario */
+    margin-bottom: 20px;
+    background-color: rgb(201, 185, 160);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .maintenance-plan h2,
+  .maintenance-plan h3 {
+    margin-top: 0;
+  }
+  
+  .maintenance-plan ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .maintenance-plan ul ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .maintenance-plan ul ul li {
+    margin-left: 20px;
+  }
+  
+  .maintenance-plan p {
+    margin-top: 10px;
+  }
+
   
