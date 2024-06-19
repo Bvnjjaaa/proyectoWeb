@@ -3,7 +3,7 @@ function validarFormulario() {
     var apellido = document.getElementById("apellido").value;
     var numero = document.getElementById("numero").value;
 
-    if (nombre.length < 3 || nombre.length > 15) {
+    if (nombre.length <= 3 || nombre.length >= 15) {
         alert("El nombre debe tener entre 3 y 15 caracteres.");
         return false;
     }
