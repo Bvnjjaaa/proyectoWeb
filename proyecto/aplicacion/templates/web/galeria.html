@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Estacion La Musa</title>
+    <link rel="stylesheet" href="{% static 'css/galeria.css' %}">  
+</head>
+<body>
+  
+  <div class="natbar">
+    <div class="rectangulo1">
+        <div class="logo-titulo">
+          <a href="{% url 'index' %}">
+            <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
+          </a>
+          <h1>Estacion La Musa</h1>
+        </div>
+      </div>
+      <div class="rectangulo2">
+        <div class="links">
+          <a href="{% url 'index' %}">Menu</a>
+          <div class="dropdown">
+              <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
+              <div class="dropdown-content">
+                  <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
+                  <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
+                  <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
+              </div>
+          </div>
+          <a href="{% url 'galeria' %}">Galeria</a>
+          <a href="{% url 'nosotros' %}">Nosotros</a>
+          <a href="{% url 'blog' %}">Blog</a>
+        </div>
+      </div>
+    </div> 
+  <div class="gal">
+    <h1>Registros de nuestro espacio</h1>
+  </div>
+  <div class="fotos">
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria1.jpg' %}" alt="galeria 1">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria2.jpg' %}" alt="Imagen 2">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria3.jpg' %}" alt="Imagen 3">
+    </div>
+  </div>
+  <div class="fotos">
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria4.jpg' %}" alt="Imagen 4">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria5.jpg' %}" alt="Imagen 5">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria6.jpg' %}" alt="Imagen 6">
+    </div>
+  </div>  
+  <br>
+  <div class="gal1">
+    <h1>Algunos de los instrumentos que han pasado por aqui</h1>
+  </div>
+  <div class="fotos">
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria7.jpg' %}" alt="Imagen 4">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria8.jpg' %}" alt="Imagen 5">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria9.jpg' %}" alt="Imagen 6">
+    </div>
+  </div>  
+  <div class="fotos">
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria10.jpg' %}" alt="Imagen 4">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria11.jpg' %}" alt="Imagen 5">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria12.jpg' %}" alt="Imagen 6">
+    </div>
+  </div>  
+  <div class="fotos">
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria13.jpg' %}" alt="Imagen 4">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria14.jpg' %}" alt="Imagen 5">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria15.jpg' %}" alt="Imagen 6">
+    </div>
+  </div>  
+  <div class="fotos">
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria16.jpg' %}" alt="Imagen 4">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria17.jpg' %}" alt="Imagen 5">
+    </div>
+    <div class="image">
+      <img src="{% static 'img/galeria/galeria18.jpg' %}" alt="Imagen 6">
+    </div>
+  </div>  
+</body>
+</html>

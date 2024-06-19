@@ -1,49 +1,50 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Estacion La Musa</title>
-    <link rel="stylesheet" href="css/index.css">  
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">  
 </head>
 <body>
     <div class="natbar">
       <div class="rectangulo1">
           <div class="logo-titulo">
-            <a href="index.html">
-                <img src="img/logo.png" alt="Descripción de la imagen">
-              </a>
+            <a href="{% url 'index' %}">
+              <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
+            </a>
             <h1>Estacion La Musa</h1>
           </div>
         </div>
         <div class="rectangulo2">
           <div class="links">
-            <a href="index.html">Menu</a>
+            <a href="{% url 'index' %}">Menu</a>
             <div class="dropdown">
-                <button class="dropbtn"> <a href="servicios.html">Servicios</a>></i></button>
+                <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
                 <div class="dropdown-content">
-                    <a href="clasesguitarra.html">Clases de guitarra</a>
-                    <a href="calibracion.html">Calibración de instrumentos</a>
-                    <a href="salaensayo.html">Sala de ensayo</a>
+                    <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
+                    <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
+                    <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
                 </div>
             </div>
-            <a href="galeria.html">Galeria</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="blog.html">Blog</a>
+            <a href="{% url 'galeria' %}">Galeria</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'blog' %}">Blog</a>
           </div>
         </div>
       </div>   
       <br>
       <div class="carousel">
         <div class="slides">
-          <a href="clasesguitarra.html">
-          <div class="slide"><img src="img/menu/fotomenu1.png" alt="Imagen 1"></div>
+          <a href="{% url 'clasesguitarra' %}">
+          <div class="slide"><img src="{% static 'img/menu/fotomenu1.png' %}" alt="Imagen 1"></div>
           </a>
-          <a href="calibracion.html">
-          <div class="slide"><img src="img/menu/fotomenu2.png" alt="Imagen 2"></div>
+          <a href="{% url 'calibracion' %}">
+          <div class="slide"><img src="{% static 'img/menu/fotomenu2.png' %}" alt="Imagen 2"></div>
           </a>
-          <a href="salaensayo.html">
-          <div class="slide"><img src="img/menu/fotomenu3.png" alt="Imagen 3"></div>
+          <a href="{% url 'salaensayo' %}">
+          <div class="slide"><img src="{% static 'img/menu/fotomenu3.png' %}" alt="Imagen 3"></div>
           </a>
         </div>
         <div class="controls">
@@ -56,7 +57,7 @@
 <div class="music-store">
   <h2>Bienvenido a Nuestra Tienda de Música</h2>
   <div class="store-info">
-    <img src="img/menudesc.jpg" alt="Local" class="store-image">
+    <img src="{% static 'img/menudesc.jpg' %}" alt="Local" class="store-image">
     <div class="store-text">
       <p>Situados en el corazón de Villa Alemana, nuestra tienda de música es un lugar donde la pasión por la música cobra vida. Desde nuestro establecimiento en 2020, nos hemos dedicado a ser un punto de referencia para músicos de todas las edades y niveles de experiencia.</p>
       <p>Ofrecemos una amplia gama de servicios para satisfacer las necesidades de nuestros clientes:</p>
@@ -87,7 +88,7 @@
         <input type="number" id="edad" name="edad" min="15" placeholder="Ingrese su edad" required><br><br>
         
         <label for="numero">Número de teléfono:</label><br>
-        <input type="tel" id="numero" name="numero" placeholder="Ingrese su numero" pattern="\+569\d{8}" title="Debe comenzar con +569 y tener 8 dígitos." required><br><br>
+        <input type="tel" id="numero" name="numero" placeholder="Ingrese su numero"><br><br>
         
         <label for="correo">Correo Electrónico:</label><br>
         <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required><br><br>
@@ -101,5 +102,5 @@
       <br><br> Nuestro equipo está comprometido a brindarte la mejor experiencia musical posible. Ya sea que estés interesado en nuestras clases de guitarra, necesites calibrar tus instrumentos o desees reservar nuestra sala de ensayo, estamos listos para responder cualquier pregunta que puedas tener.
       <br><br> Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible. ¡Esperamos poder ayudarte a hacer realidad tus sueños musicales!</p>
   </div>
-<script src="validacionform.js"></script>
+<script src="{% static 'js/validacionform.js' $}"></script>
 </html>

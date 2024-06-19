@@ -1,38 +1,39 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Estacion La Musa</title>
-    <link rel="stylesheet" href="css/blog.css">  
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">  
 </head>
 <body>
   <div class="natbar">
     <div class="rectangulo1">
-      <div class="logo-titulo">
-        <a href="index.html">
-            <img src="img/logo.png" alt="Descripción de la imagen">
+        <div class="logo-titulo">
+          <a href="{% url 'index' %}">
+            <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
           </a>
-        <h1>Blog</h1>
-      </div>
-    </div>
-    <div class="rectangulo2">
-      <div class="links">
-        <a href="index.html">Menu</a>
-        <div class="dropdown">
-            <button class="dropbtn"> <a href="servicios.html">Servicios</a>></i></button>
-            <div class="dropdown-content">
-                <a href="clasesguitarra.html">Clases de guitarra</a>
-                <a href="calibracion.html">Calibración de instrumentos</a>
-                <a href="salaensayo.html">Sala de ensayo</a>
-            </div>
+          <h1>Estacion La Musa</h1>
         </div>
-        <a href="galeria.html">Galeria</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="blog.html">Blog</a>
       </div>
-    </div>
-  </div>
+      <div class="rectangulo2">
+        <div class="links">
+          <a href="{% url 'index' %}">Menu</a>
+          <div class="dropdown">
+              <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
+              <div class="dropdown-content">
+                  <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
+                  <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
+                  <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
+              </div>
+          </div>
+          <a href="{% url 'galeria' %}">Galeria</a>
+          <a href="{% url 'nosotros' %}">Nosotros</a>
+          <a href="{% url 'blog' %}">Blog</a>
+        </div>
+      </div>
+    </div> 
   <div class="cac">
     <h1>Preguntas Frecuentes</h1>
   </div>
@@ -81,10 +82,10 @@
 </div>
   <div class="clases">
       <h1>Algunas de las fotos de nuestros estudiantes</h1>
-      <img src="img/blog/clases1.png" alt="Imagen 1">     
-      <img src="img/blog/clases2.png" alt="Imagen 2">  
-      <img src="img/blog/clases3.png" alt="Imagen 4">
-      <img src="img/blog/clases4.png" alt="Imagen 5">
+      <img src="{% static 'img/blog/clases1.png' %}" alt="Imagen 1">     
+      <img src="{% static 'img/blog/clases2.png' %}" alt="Imagen 2">  
+      <img src="{% static 'img/blog/clases3.png' %}" alt="Imagen 4">
+      <img src="{% static 'img/blog/clases4.png' %}" alt="Imagen 5">
   </div>
       
       

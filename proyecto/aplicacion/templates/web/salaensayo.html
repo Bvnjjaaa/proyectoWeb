@@ -1,54 +1,55 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sala de Ensayo - Estacion La Musa</title>
-    <link rel="stylesheet" href="css/saladeensayo.css">  
+    <link rel="stylesheet" href="{% static 'css/saladeensayo.css' %}">  
 </head>
 <body>
   <div class="natbar">
     <div class="rectangulo1">
-      <div class="logo-titulo">
-        <a href="index.html">
-            <img src="img/logo.png" alt="Descripción de la imagen">
+        <div class="logo-titulo">
+          <a href="{% url 'index' %}">
+            <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
           </a>
-        <h1>Sala de Ensayo</h1>
-      </div>
-    </div>
-    <div class="rectangulo2">
-      <div class="links">
-        <a href="index.html">Menu</a>
-        <div class="dropdown">
-            <button class="dropbtn"> <a href="servicios.html">Servicios</a>></i></button>
-            <div class="dropdown-content">
-                <a href="clasesguitarra.html">Clases de guitarra</a>
-                <a href="calibracion.html">Calibración de instrumentos</a>
-                <a href="salaensayo.html">Sala de ensayo</a>
-            </div>
+          <h1>Estacion La Musa</h1>
         </div>
-        <a href="galeria.html">Galeria</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="blog.html">Blog</a>
       </div>
-    </div>
-  </div>
+      <div class="rectangulo2">
+        <div class="links">
+          <a href="{% url 'index' %}">Menu</a>
+          <div class="dropdown">
+              <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
+              <div class="dropdown-content">
+                  <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
+                  <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
+                  <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
+              </div>
+          </div>
+          <a href="{% url 'galeria' %}">Galeria</a>
+          <a href="{% url 'nosotros' %}">Nosotros</a>
+          <a href="{% url 'blog' %}">Blog</a>
+        </div>
+      </div>
+    </div> 
   <div class="topa">
     <div class="fotos">
       <div class="image">
-        <img src="img/salaensayo/sala1.jpg" alt="Imagen 1">
+        <img src="{% static 'img/salaensayo/sala1.jpg' %}" alt="Imagen 1">
       </div>
       <div class="image">
-        <img src="img/salaensayo/sala2.jpg" alt="Imagen 2">
+        <img src="{% static 'img/salaensayo/sala2.jpg' %}" alt="Imagen 2">
       </div>
       </div>
   </div>
       <div class="fotos">
         <div class="image">
-          <img src="img/salaensayo/sala3.jpg" alt="Imagen 3">
+          <img src="{% static 'img/salaensayo/sala3.jpg' %}" alt="Imagen 3">
         </div>
         <div class="image">
-          <img src="img/salaensayo/sala4.jpeg" alt="Imagen 4">
+          <img src="{% static 'img/salaensayo/sala4.jpeg' %}" alt="Imagen 4">
         </div>
       </div>
       <div class="maintenance-plans">
