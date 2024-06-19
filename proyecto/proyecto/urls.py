@@ -28,4 +28,5 @@ urlpatterns = [
     path('galeria/', views.galeria, name='galeria'),
     path('nosotros/', views.nosotros, name='nosotros'),
     path('blog/', views.blog, name='blog'),
+    path('contacto/', views.contacto, name='contacto'),
 ]

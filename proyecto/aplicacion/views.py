@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 # Create your views here.
 
@@ -25,3 +27,14 @@ def nosotros(request):
 
 def blog(request):
     return render(request, 'web/blog.html')
+
+def contacto(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('nombre')
+        apellido = request.POST.get('apellido')
+        edad = request.POST.get('edad')
+        numero = request.POST.get('numero')
+        correo = request.POST.get('correo')
+
+        return HttpResponseRedirect(reverse('index'))
+    return render(request, 'index.html')

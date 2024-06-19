@@ -9,98 +9,101 @@
 </head>
 <body>
     <div class="natbar">
-      <div class="rectangulo1">
-          <div class="logo-titulo">
-            <a href="{% url 'index' %}">
-              <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
-            </a>
-            <h1>Estacion La Musa</h1>
-          </div>
+        <div class="rectangulo1">
+            <div class="logo-titulo">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
+                </a>
+                <h1>Estacion La Musa</h1>
+            </div>
         </div>
         <div class="rectangulo2">
-          <div class="links">
-            <a href="{% url 'index' %}">Menu</a>
-            <div class="dropdown">
-                <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
-                <div class="dropdown-content">
-                    <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
-                    <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
-                    <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
+            <div class="links">
+                <a href="{% url 'index' %}">Menu</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
+                    <div class="dropdown-content">
+                        <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
+                        <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
+                        <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
+                    </div>
                 </div>
+                <a href="{% url 'galeria' %}">Galeria</a>
+                <a href="{% url 'nosotros' %}">Nosotros</a>
+                <a href="{% url 'blog' %}">Blog</a>
             </div>
-            <a href="{% url 'galeria' %}">Galeria</a>
-            <a href="{% url 'nosotros' %}">Nosotros</a>
-            <a href="{% url 'blog' %}">Blog</a>
-          </div>
         </div>
-      </div>   
-      <br>
-      <div class="carousel">
+    </div>   
+    <br>
+    <div class="carousel">
         <div class="slides">
-          <a href="{% url 'clasesguitarra' %}">
-          <div class="slide"><img src="{% static 'img/menu/fotomenu1.png' %}" alt="Imagen 1"></div>
-          </a>
-          <a href="{% url 'calibracion' %}">
-          <div class="slide"><img src="{% static 'img/menu/fotomenu2.png' %}" alt="Imagen 2"></div>
-          </a>
-          <a href="{% url 'salaensayo' %}">
-          <div class="slide"><img src="{% static 'img/menu/fotomenu3.png' %}" alt="Imagen 3"></div>
-          </a>
+            <a href="{% url 'clasesguitarra' %}">
+                <div class="slide"><img src="{% static 'img/menu/fotomenu1.png' %}" alt="Imagen 1"></div>
+            </a>
+            <a href="{% url 'calibracion' %}">
+                <div class="slide"><img src="{% static 'img/menu/fotomenu2.png' %}" alt="Imagen 2"></div>
+            </a>
+            <a href="{% url 'salaensayo' %}">
+                <div class="slide"><img src="{% static 'img/menu/fotomenu3.png' %}" alt="Imagen 3"></div>
+            </a>
         </div>
         <div class="controls">
-          <button class="control prev">&#10094;</button>
-          <button class="control next">&#10095;</button>
+            <button class="control prev">&#10094;</button>
+            <button class="control next">&#10095;</button>
         </div>
-      </div>
+    </div>
       
+    <div class="music-store">
+        <h2>Bienvenido a Nuestra Tienda de Música</h2>
+        <div class="store-info">
+            <img src="{% static 'img/menudesc.jpg' %}" alt="Local" class="store-image">
+            <div class="store-text">
+                <p>Situados en el corazón de Villa Alemana, nuestra tienda de música es un lugar donde la pasión por la música cobra vida. Desde nuestro establecimiento en 2020, nos hemos dedicado a ser un punto de referencia para músicos de todas las edades y niveles de experiencia.</p>
+                <p>Ofrecemos una amplia gama de servicios para satisfacer las necesidades de nuestros clientes:</p>
+                <ul>
+                    <li>Clases de guitarra impartidas por profesores experimentados y dedicados que adaptan el aprendizaje a las necesidades individuales de cada estudiante.</li>
+                    <li>Servicio profesional de calibración y mantenimiento de instrumentos musicales, incluyendo guitarras eléctricas, acústicas y bajos, para asegurar que tu instrumento siempre esté en su mejor estado.</li>
+                    <li>Salas de ensayo completamente equipadas con todo lo necesario para que los músicos practiquen y creen música en un ambiente inspirador.</li>
+                </ul>
+                <p>Nuestro objetivo es ser más que una simple tienda de música; queremos ser un espacio donde los músicos se sientan bienvenidos, inspirados y apoyados en su viaje musical.</p>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="h1index">Formulario de Contacto</h1>
+    <div class="todo">
+        <div class="formulario">
+            <fieldset>
+                <legend>Tus datos</legend>
+                <form action="{% url 'contacto' %}" method="post" onsubmit="return validarFormulario()" autocomplete="on">
+                    {% csrf_token %}
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>
+                    
+                    <label for="apellido">Apellido:</label><br>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido"><br><br>
+                    
+                    <label for="edad">Edad:</label><br>
+                    <input type="number" id="edad" name="edad" placeholder="Ingrese su edad"><br><br>
+                    
+                    <label for="numero">Número de teléfono:</label><br>
+                    <input type="tel" id="numero" name="numero" placeholder="Ingrese su numero"><br><br>
+                    
+                    <label for="correo">Correo Electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required><br><br>
+
+                    <label for="rut">RUT:</label><br>
+                    <input type="text" id="rut" name="rut" placeholder="Ingrese su RUT"><br><br>
+                    
+                    <input class="boton" type="submit" value="Enviar">
+                    <input class="boton" type="reset" value="Borrar">
+                </form>
+            </fieldset>
+        </div>
+        <p>En Estación La Musa, nos apasiona la música tanto como a ti. Si tienes preguntas sobre nuestros servicios, necesitas asesoramiento o simplemente quieres compartir tus pensamientos, estamos aquí para ayudarte.
+        <br><br> Nuestro equipo está comprometido a brindarte la mejor experiencia musical posible. Ya sea que estés interesado en nuestras clases de guitarra, necesites calibrar tus instrumentos o desees reservar nuestra sala de ensayo, estamos listos para responder cualquier pregunta que puedas tener.
+        <br><br> Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible. ¡Esperamos poder ayudarte a hacer realidad tus sueños musicales!</p>
+    </div>
+    <script src="{% static 'js/validacionform.js' %}"></script>
 </body>
-<div class="music-store">
-  <h2>Bienvenido a Nuestra Tienda de Música</h2>
-  <div class="store-info">
-    <img src="{% static 'img/menudesc.jpg' %}" alt="Local" class="store-image">
-    <div class="store-text">
-      <p>Situados en el corazón de Villa Alemana, nuestra tienda de música es un lugar donde la pasión por la música cobra vida. Desde nuestro establecimiento en 2020, nos hemos dedicado a ser un punto de referencia para músicos de todas las edades y niveles de experiencia.</p>
-      <p>Ofrecemos una amplia gama de servicios para satisfacer las necesidades de nuestros clientes:</p>
-      <ul>
-        <li>Clases de guitarra impartidas por profesores experimentados y dedicados que adaptan el aprendizaje a las necesidades individuales de cada estudiante.</li>
-        <li>Servicio profesional de calibración y mantenimiento de instrumentos musicales, incluyendo guitarras eléctricas, acústicas y bajos, para asegurar que tu instrumento siempre esté en su mejor estado.</li>
-        <li>Salas de ensayo completamente equipadas con todo lo necesario para que los músicos practiquen y creen música en un ambiente inspirador.</li>
-      </ul>
-      <p>Nuestro objetivo es ser más que una simple tienda de música; queremos ser un espacio donde los músicos se sientan bienvenidos, inspirados y apoyados en su viaje musical.</p>
-    </div>
-  </div>
-</div>
-
-
-  <h1 id="h1index">Formulario de Contacto</h1>
-  <div class="todo">
-    <div class="formulario">
-      <fieldset>
-      <legend>Tus datos</legend>
-      <form action="#" method="post" onsubmit="return validarFormulario()" autocomplete="on">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>
-        
-        <label for="apellido">Apellido:</label><br>
-        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" pattern=".{3,15}" title="Debe tener entre 3 y 15 caracteres" required><br><br>
-        
-        <label for="edad">Edad:</label><br>
-        <input type="number" id="edad" name="edad" min="15" placeholder="Ingrese su edad" required><br><br>
-        
-        <label for="numero">Número de teléfono:</label><br>
-        <input type="tel" id="numero" name="numero" placeholder="Ingrese su numero"><br><br>
-        
-        <label for="correo">Correo Electrónico:</label><br>
-        <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required><br><br>
-        
-        <input class="boton" type="submit" value="Enviar">
-        <input class="boton" type="reset" value="Borrar">
-      </form>
-      </fieldset>
-    </div>
-    <p>En Estación La Musa, nos apasiona la música tanto como a ti. Si tienes preguntas sobre nuestros servicios, necesitas asesoramiento o simplemente quieres compartir tus pensamientos, estamos aquí para ayudarte.
-      <br><br> Nuestro equipo está comprometido a brindarte la mejor experiencia musical posible. Ya sea que estés interesado en nuestras clases de guitarra, necesites calibrar tus instrumentos o desees reservar nuestra sala de ensayo, estamos listos para responder cualquier pregunta que puedas tener.
-      <br><br> Completa el formulario a continuación y nos pondremos en contacto contigo lo antes posible. ¡Esperamos poder ayudarte a hacer realidad tus sueños musicales!</p>
-  </div>
-<script src="{% static 'js/validacionform.js' $}"></script>
 </html>
