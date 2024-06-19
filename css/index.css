@@ -7,8 +7,12 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
-  
+
   .rectangulo1 {
     background-color: rgb(147 106 68);
     padding: 4px;
@@ -16,7 +20,6 @@ body{
   
   .rectangulo2 {
     background-color: black;
-    padding: 10px;
   }
   
   .logo-titulo {
@@ -57,42 +60,34 @@ body{
     box-shadow: 0 0 10px white;
   }
 
-.maintenance-plans {
+.music-store {
+    padding: 50px;
+  }
+  
+  .store-info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
   }
   
-  .maintenance-plan {
-    width: calc(33% - 20px); /* Ajustar el ancho de las columnas según sea necesario */
-    margin-bottom: 20px;
-    background-color: rgb(201, 185, 160);
-    padding: 20px;
-    box-sizing: border-box;
+  .store-image {
+    width: 700px;
+    margin-right: 200px;
   }
   
-  .maintenance-plan h2,
-  .maintenance-plan h3 {
+  .store-text {
+    max-width: 900px;
+  }
+  
+  .store-text p {
     margin-top: 0;
+    font-size: 18px;
   }
   
-  .maintenance-plan ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .maintenance-plan ul ul {
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .maintenance-plan ul ul li {
-    margin-left: 20px;
-  }
-  
-  .maintenance-plan p {
-    margin-top: 10px;
+  .store-text ul {
+    padding-left: 20px;
+    font-size: 18px;
   }
 
   .dropdown {
@@ -133,3 +128,68 @@ body{
     margin-left: 100px; /* Ajusta el margen izquierdo para que coincida con el de los otros enlaces */
     margin-right: 100px; /* Ajusta el margen derecho para que coincida con el de los otros enlaces */
   }
+
+  .carousel {
+    position: relative;
+    max-width: 2000px; /* Ajustado el ancho máximo */
+    margin: 0 auto;
+    overflow: hidden;
+    top: 108px;
+  }
+  .slides {
+    display: flex;
+    animation: slide-animation 15s infinite;
+  }
+  .slide {
+    flex: 0 0 100%;
+  }
+  @keyframes slide-animation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  .carousel:hover .controls {
+    opacity: 1;
+  }
+  .controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+#h1index{
+  text-align: center;
+}
+
+.todo{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2%;
+}
+
+.todo p{
+  font-size: 19px;
+  margin-right: 20px;
+}
+
+fieldset{
+  text-align: center;
+  border-color: black;
+}
+
+.boton{
+  background-color: rgb(147 106 68);
+  border: none;
+  border-radius: 3px;
+  margin: 10px;
+}
