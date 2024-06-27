@@ -75,7 +75,7 @@
         <div class="formulario">
             <fieldset>
                 <legend>Tus datos</legend>
-                <form action="{% url 'contacto' %}" method="post" onsubmit="return validarFormulario()" autocomplete="on">
+                <form action="{% url 'contacto_nuevo' %}" method="post" onsubmit="return validarFormulario()" autocomplete="on">
                     {% csrf_token %}
                     <label for="nombre">Nombre:</label><br>
                     <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>

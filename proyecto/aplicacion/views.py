@@ -1,8 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from .models import Contacto
+from .forms import ContactoForm
 
-# Create your views here.
+def contacto_list(request):
+    contactos = Contacto.objects.all()
+    return render(request, 'web/contacto_lista.html', {'contactos': contactos})
+
+def contacto_nuevo(request):
+    if request.method == 'POST':
+        form = ContactoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('contacto_lista')
+    else:
+        form = ContactoForm()
+    
+    return render(request, 'web/contacto_agregar.html', {'form': form})
+
+def contacto_eliminar(request, id):
+    contacto = get_object_or_404(Contacto, id=id)
+    if request.method == 'POST':
+        contacto.delete()
+        return redirect('contacto_lista')
+    return render(request, 'web/contacto_confirmar_eliminar.html', {'contacto': contacto})
 
 def index(request):
     return render(request, 'web/index.html')
@@ -28,13 +50,3 @@ def nosotros(request):
 def blog(request):
     return render(request, 'web/blog.html')
 
-def contacto(request):
-    if request.method == 'POST':
-        nombre = request.POST.get('nombre')
-        apellido = request.POST.get('apellido')
-        edad = request.POST.get('edad')
-        numero = request.POST.get('numero')
-        correo = request.POST.get('correo')
-
-        return HttpResponseRedirect(reverse('index'))
-    return render(request, 'index.html')
