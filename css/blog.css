@@ -1,0 +1,149 @@
+body{
+    background-color: burlywood;
+    margin: 0%;
+  }
+  
+  .natbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .rectangulo1 {
+    background-color: rgb(147 106 68);
+    padding: 4px;
+  }
+  
+  .rectangulo2 {
+    background-color: black;
+  }
+  
+  .logo-titulo {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; 
+  }
+  
+  .logo-titulo img {
+    width: 165px;
+      margin-bottom: -10px;
+      margin-left: 30px;
+  }
+  
+  .logo-titulo h1 {
+    color: white;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: -200px;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: center; 
+    padding: 10px 20px;
+  }
+  
+  .links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+  }
+  
+  .links a:hover {
+    box-shadow: 0 0 10px white;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Mismo color que la barra de navegación */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: white; /* Color del texto igual al de los otros enlaces */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #555; /* Color de fondo al pasar el cursor igual al de los otros enlaces */
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropbtn {
+    background-color: #333; /* Mismo color que la barra de navegación */
+    color: white; /* Color del texto igual al de los otros enlaces */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 100px; /* Ajusta el margen izquierdo para que coincida con el de los otros enlaces */
+    margin-right: 100px; /* Ajusta el margen derecho para que coincida con el de los otros enlaces */
+  }
+
+  .clases{
+    margin: 50px;
+  }
+  .clases h1{
+    text-align: center;
+  }
+  .cac{
+    margin-top: 160px;
+    text-align: center;
+  }
+  
+  .maintenance-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .maintenance-plan {
+    width: calc(33% - 20px); /* Ajustar el ancho de las columnas según sea necesario */
+    margin-bottom: 20px;
+    background-color: rgb(201, 185, 160);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .maintenance-plan h2,
+  .maintenance-plan h3 {
+    margin-top: 0;
+  }
+  
+  .maintenance-plan ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .maintenance-plan ul ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .maintenance-plan ul ul li {
+    margin-left: 20px;
+  }
+  
+  .maintenance-plan p {
+    margin-top: 10px;
+  }

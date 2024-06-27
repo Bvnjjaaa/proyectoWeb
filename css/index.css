@@ -1,0 +1,315 @@
+/* Estilos Generales */
+body{
+  background-color: burlywood;
+  margin: 0%;
+}
+
+h1, h2 {
+  font-family: 'Georgia', serif; /* Fuente para encabezados */
+  color: #444; /* Color de los encabezados */
+}
+
+h1 {
+  font-size: 2.5em; /* Tamaño del texto para h1 */
+  text-align: center; /* Alineación centrada */
+  margin-top: 20px; /* Margen superior */
+}
+
+h2 {
+  font-size: 2em; /* Tamaño del texto para h2 */
+  margin-bottom: 20px; /* Margen inferior */
+  text-align: center; /* Alineación centrada */
+}
+
+/* Estilos de la Barra de Navegación */
+.natbar {
+  display: flex;
+  flex-direction: column;
+  background-color: #333; /* Color de fondo de la barra de navegación */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que la barra esté siempre encima */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.rectangulo1 {
+  background-color: rgb(147 106 68);
+  padding: 4px;
+}
+
+.rectangulo2 {
+  background-color: black;
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; 
+}
+
+.logo-titulo img {
+  width: 165px;
+    margin-bottom: -10px;
+    margin-left: 30px;
+}
+
+.logo-titulo h1 {
+  color: white;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+  margin-left: -200px;
+}
+
+.links {
+  display: flex;
+  justify-content: center; /* Centra los enlaces */
+  padding: 10px 0;
+}
+
+.links a {
+  color: white; /* Color de los enlaces */
+  text-decoration: none;
+  margin: 0 20px; /* Márgenes a los lados */
+  font-size: 18px; /* Tamaño del texto */
+  transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.links a:hover {
+  color: #ddd; /* Color de los enlaces al pasar el ratón */
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none; /* Sin fondo */
+  border: none;
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño del texto */
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444; /* Color de fondo del contenido desplegable */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white; /* Color de los enlaces dentro del desplegable */
+  padding: 12px 16px; /* Espaciado interior */
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #555; /* Color de fondo al pasar el ratón */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Muestra el contenido desplegable al pasar el ratón */
+}
+
+/* Estilos del Carrusel */
+.carousel {
+  position: relative;
+  max-width: 100%; /* Ancho máximo del carrusel ajustado */
+  margin: 100px auto; /* Centra el carrusel */
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Centra el carrusel horizontalmente */
+  align-items: center; /* Centra el carrusel verticalmente */
+}
+
+.slides {
+  display: flex;
+  animation: slide-animation 15s infinite; /* Animación de deslizamiento */
+  width: 100%; /* Asegura que las diapositivas ocupen el ancho total del carrusel */
+}
+
+.slide {
+  flex: 0 0 100%; /* Cada diapositiva ocupa el 100% del ancho del contenedor */
+  display: flex;
+  justify-content: center; /* Centra el contenido de cada diapositiva horizontalmente */
+  align-items: center; /* Centra el contenido de cada diapositiva verticalmente */
+}
+
+@keyframes slide-animation {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  75% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Coloca los botones a los lados */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.control {
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  border: none;
+  color: white; /* Color del texto */
+  font-size: 20px; /* Tamaño del texto reducido */
+  padding: 5px; /* Padding reducido */
+  cursor: pointer;
+}
+
+.carousel:hover .controls {
+  opacity: 1; /* Muestra los controles al pasar el ratón */
+}
+/* Estilos de la Tienda de Música */
+.music-store {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.store-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye los elementos equitativamente */
+  align-items: center;
+}
+
+.store-image {
+  width: 100%;
+  max-width: 500px; /* Ancho máximo de la imagen */
+  margin: 20px;
+}
+
+.store-text {
+  flex: 1; /* Ocupa el espacio restante */
+  margin: 20px;
+}
+
+.store-text p, .store-text ul {
+  font-size: 16px; /* Tamaño del texto */
+  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+}
+
+.store-text ul {
+  list-style-type: disc; /* Estilo de la lista */
+  padding-left: 20px;
+}
+
+/* Estilos del Formulario de Contacto */
+#h1index {
+  margin-top: 50px; /* Margen superior */
+}
+
+.todo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 20px;
+  background-color: white; /* Fondo blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+.todo p {
+  font-size: 16px; /* Tamaño del texto */
+  margin-right: 20px; /* Margen derecho */
+  flex: 1; /* Ocupa el espacio restante */
+}
+
+.formulario {
+  max-width: 500px;
+  flex: 1; /* Ocupa el espacio restante */
+}
+
+fieldset {
+  text-align: center;
+  border-color: #ccc; /* Color del borde */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+legend {
+  font-size: 1.2em; /* Tamaño del texto */
+  color: #333; /* Color del texto */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+label {
+  display: block; /* Bloque completo */
+  margin-bottom: 5px; /* Margen inferior */
+  font-weight: bold; /* Texto en negrita */
+  color: #555; /* Color del texto */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: calc(100% - 20px); /* Ancho completo menos el padding */
+  padding: 10px;
+  margin-bottom: 15px; /* Margen inferior */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+textarea {
+  resize: vertical; /* Permite cambiar el tamaño vertical */
+}
+
+.boton {
+  background-color: #944A00; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none;
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.boton:hover {
+  background-color: #773800; /* Color de fondo al */
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Esto centra verticalmente */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  .logo-titulo h1 {
+      margin-left: 0;
+  }
+
+  .store-info {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .todo {
+      flex-direction: column;
+      align-items: center;
+  }
+}

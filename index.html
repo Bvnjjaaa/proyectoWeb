@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Estacion La Musa</title>
+    <link rel="stylesheet" href="css/index.css">  
+</head>
+<body>
+    <div class="natbar">
+        <div class="rectangulo1">
+            <div class="logo-titulo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Descripción de la imagen">
+                </a>
+                <h1>Estacion La Musa</h1>
+            </div>
+        </div>
+        <div class="rectangulo2">
+            <div class="links">
+                <a href="index.html">Menu</a>
+                <div class="dropdown">
+                    <button class="dropbtn"><a href="servicios.html">Servicios</a></button>
+                    <div class="dropdown-content">
+                        <a href="clasesguitarra.html">Clases de guitarra</a>
+                        <a href="calibracion.html">Calibración de instrumentos</a>
+                        <a href="salaensayo.html">Sala de ensayo</a>
+                    </div>
+                </div>
+                <a href="galeria.html">Galeria</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+    </div>   
+    <br>
+    <div class="carousel">
+        <div class="slides">
+            <a href="clasesguitarra.html">
+                <div class="slide"><img src="img/menu/fotomenu1.png" alt="Imagen 1"></div>
+            </a>
+            <a href="calibracion.html">
+                <div class="slide"><img src="img/menu/fotomenu2.png" alt="Imagen 2"></div>
+            </a>
+            <a href="salaensayo.html">
+                <div class="slide"><img src="img/menu/fotomenu3.png" alt="Imagen 3"></div>
+            </a>
+        </div>
+        <div class="controls">
+            <button class="control prev">&#10094;</button>
+            <button class="control next">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="music-store">
+        <h2>Bienvenido a Nuestra Tienda de Música</h2>
+        <div class="store-info">
+            <img src="img/menudesc.jpg" alt="Local" class="store-image">
+            <div class="store-text">
+              <br>
+                <p>Situados en el corazón de Villa Alemana, nuestra tienda de música es un lugar donde la pasión por la música cobra vida. Desde nuestro establecimiento en 2020, nos hemos dedicado a ser un punto de referencia para músicos de todas las edades y niveles de experiencia.</p>
+                <p>Ofrecemos una amplia gama de servicios para satisfacer las necesidades de nuestros clientes:</p>
+                <ul>
+                    <li>Clases de guitarra impartidas por profesores experimentados y dedicados que adaptan el aprendizaje a las necesidades individuales de cada estudiante.</li>
+                    <li>Servicio profesional de calibración y mantenimiento de instrumentos musicales, incluyendo guitarras eléctricas, acústicas y bajos, para asegurar que tu instrumento siempre esté en su mejor estado.</li>
+                    <li>Salas de ensayo completamente equipadas con todo lo necesario para que los músicos practiquen y creen música en un ambiente inspirador.</li>
+                </ul>
+                <p>Nuestro objetivo es ser más que una simple tienda de música; queremos ser un espacio donde los músicos se sientan bienvenidos, inspirados y apoyados en su viaje musical.</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+    <h1>Disfruta de la playlist de nuestra comunidad</h1>
+    <h2>¿Quieres agregar tu canción a nuestra playlist?</h2>
+    <div class="center-container">
+      <iframe width="80%" height="465" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/estacion-la-musa&amp;">
+      </iframe>
+    </div>
+
+    <h1 id="h1index">Formulario de Contacto</h1>  <br>
+    <div class="todo">
+        <div class="formulario">
+            <fieldset>
+                <legend>Tus datos</legend>
+                <form action="#" method="post" onsubmit="return validarFormulario()" autocomplete="on">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" pattern=".{3,15}" title="Debe tener entre 3 y 15 caracteres" placeholder="Ingrese su nombre" required><br><br>
+
+                    
+                    <label for="correo">Correo Electrónico:</label><br>
+                    <input type="email" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required><br><br>
+
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje aquí..." rows="4" cols="50"></textarea><br><br>
+                    
+                    <input class="boton" type="submit" value="Enviar">
+                    <input class="boton" type="reset" value="Borrar">
+                </form>
+            </fieldset>
+        </div>
+        <p>En Estación La Musa, compartimos tu pasión por la música y estamos aquí para ayudarte en todo lo que necesites. Si tienes alguna pregunta sobre nuestros servicios, quieres agregar tu cancion a nuestra playlist, necesitas asesoramiento especializado o deseas compartir tus pensamientos, no dudes en contactarnos.
+            <br><br> Por favor, completa el formulario a continuación y nos pondremos en contacto contigo a la mayor brevedad posible. ¡Estamos ansiosos por ayudarte a cumplir tus sueños musicales!</p>
+         <h2></h2>
+          </div>
+<script src="validacionform.js"></script>
+<br>
+</body>
+</html>
