@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Ensayo - Estacion La Musa</title>
+    <link rel="stylesheet" href="{% static 'css/saladeensayo.css' %}">  
+</head>
+<body>
+  <div class="natbar">
+    <div class="rectangulo1">
+        <div class="logo-titulo">
+          <a href="{% url 'index' %}">
+            <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
+          </a>
+          <h1>Estacion La Musa</h1>
+        </div>
+      </div>
+      <div class="rectangulo2">
+        <div class="links">
+          <a href="{% url 'index' %}">Menu</a>
+          <div class="dropdown">
+              <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
+              <div class="dropdown-content">
+                  <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
+                  <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
+                  <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
+              </div>
+          </div>
+          <a href="{% url 'galeria' %}">Galeria</a>
+          <a href="{% url 'nosotros' %}">Nosotros</a>
+          <a href="{% url 'blog' %}">Blog</a>
+        </div>
+      </div>
+    </div> 
+  <div class="topa">
+    <div class="fotos">
+      <div class="image">
+        <img src="{% static 'img/salaensayo/sala1.jpg' %}" alt="Imagen 1">
+      </div>
+      <div class="image">
+        <img src="{% static 'img/salaensayo/sala2.jpg' %}" alt="Imagen 2">
+      </div>
+      </div>
+  </div>
+      <div class="fotos">
+        <div class="image">
+          <img src="{% static 'img/salaensayo/sala3.jpg' %}" alt="Imagen 3">
+        </div>
+        <div class="image">
+          <img src="{% static 'img/salaensayo/sala4.jpeg' %}" alt="Imagen 4">
+        </div>
+      </div>
+      <div class="maintenance-plans">
+        <div class="maintenance-plan">
+          <h2>Características</h2>
+          <p>Con una atmósfera acogedora y un ambiente agradable, nuestra sala te invita a sumergirte en tu música y sacar lo mejor de ti mismo.
+      
+            Equipada con un amplificador de guitarra Vox AC15, un amplificador de bajo Laney de 100W, tres atriles con micrófonos, una batería completa y una mesa de mezclas de 12 canales, nuestra sala ofrece todo lo que necesitas para ensayar y perfeccionar tu sonido.
+            
+            Ya sea que estés grabando demos, preparándote para un concierto o simplemente disfrutando de una sesión de improvisación, nuestro espacio está diseñado para inspirarte y ayudarte a alcanzar tus metas musicales. </p>
+        </div>
+        <div class="maintenance-plan">
+          <h2>Valores</h2>
+          <p>El valor del arriendo de nuestra sala es de 8000 CLP por hora. Además, ofrecemos el arriendo de platillos y otros instrumentos adicionales para complementar tu experiencia de ensayo. Los precios de los instrumentos adicionales varían según el artículo.
+      
+            Actualmente, tenemos una promoción especial: por cada reserva de 3 horas, te regalamos el arriendo de los platillos y un instrumento adicional de tu elección.</p>
+        </div>
+      </div>
+      
+</body>
+</html>

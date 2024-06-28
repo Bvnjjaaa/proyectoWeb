@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calibración - Estacion La Musa</title>
+    <link rel="stylesheet" href="{% static 'css/calibracion.css' %}">
+</head>
+<body>
+<div class="natbar">
+    <div class="rectangulo1">
+        <div class="logo-titulo">
+            <a href="/">
+                <img src="{% static 'img/logo.png' %}" alt="Estacion La Musa">
+            </a>
+            <h1>Estacion La Musa</h1>
+        </div>
+    </div>
+    <div class="rectangulo2">
+        <div class="links">
+            <a href="/">Menú</a>
+            <div class="dropdown">
+                <button class="dropbtn"><a href="/servicios/">Servicios</a></button>
+                <div class="dropdown-content">
+                    <a href="/clasesguitarra/">Clases de guitarra</a>
+                    <a href="/calibracion/">Calibración de instrumentos</a>
+                    <a href="/salaensayo/">Sala de ensayo</a>
+                </div>
+            </div>
+            <a href="/galeria/">Galería</a>
+            <a href="/nosotros/">Nosotros</a>
+            <a href="/blog/">Blog</a>
+            <a href="#" id="verCarrito">Carrito</a> <!-- Enlace al carrito, id verCarrito -->
+        </div>
+    </div>
+</div>
+
+<div class="maintenance-plans">
+    <div class="maintenance-plan">
+        <h2>Plan de Mantenimiento Simple</h2>
+        <ul>
+            <li><strong>Servicio de Calibración y Mantenimiento:</strong>
+                <ul>
+                    <li>Limpieza general del instrumento.</li>
+                    <li>Hidratación del diapasón.</li>
+                    <li>Ajuste del alma.</li>
+                    <li>Acción y altura de las cuerdas.</li>
+                    <li>Octavación.</li>
+                    <li>Revisión de la electrónica.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Tarifas:</h3>
+        <ul>
+            <li>Guitarra eléctrica de puente fijo: $20.000 <button onclick="agregarAlCarrito('Guitarra eléctrica de puente fijo(Simple)', 20000)">Agregar</button></li>
+            <li>Guitarra acústica: $22.000 <button onclick="agregarAlCarrito('Guitarra acústica(Simple)', 22000)">Agregar</button></li>
+            <li>Guitarra con puente flotante: $25.000 <button onclick="agregarAlCarrito('Guitarra con puente flotante(Simple)', 25000)">Agregar</button></li>
+            <li>Bajo eléctrico: $20.000 <button onclick="agregarAlCarrito('Bajo eléctrico(Simple)', 20000)">Agregar</button></li>
+        </ul>
+        <p>Nota: Las cuerdas no están incluidas en el servicio y deben ser proporcionadas por el cliente o adquiridas por un costo adicional.</p>
+        <p>Cualquier trabajo adicional no especificado en el plan de mantenimiento está sujeto a tarifas adicionales.</p>
+    </div>
+    <div class="maintenance-plan">
+      <h2>Plan de Mantenimiento Avanzado</h2>
+      <ul>
+        <li><strong>Servicio Premium de Calibración y Mantenimiento:</strong>
+          <ul>
+            <li>Limpieza profunda y pulido del instrumento.</li>
+            <li>Hidratación y tratamiento especial del diapasón.</li>
+            <li>Ajuste personalizado del alma para una respuesta óptima.</li>
+            <li>Ajuste meticuloso de la acción y altura de las cuerdas.</li>
+            <li>Octavación precisa para una entonación perfecta.</li>
+            <li>Inspección minuciosa y limpieza de componentes electrónicos.</li>
+            <li>Lubricación de clavijas y puentes para un rendimiento suave.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Tarifas:</h3>
+      <ul>
+        <li>Guitarra eléctrica de puente fijo: $35.000 <button onclick="agregarAlCarrito('Guitarra eléctrica de puente fijo(Avanzado)', 35000)">Agregar</button></li>
+        <li>Guitarra acústica: $40.000 <button onclick="agregarAlCarrito('Guitarra acústica(Avanzado)', 40000)">Agregar</button></li>
+        <li>Guitarra con puente flotante: $45.000 <button onclick="agregarAlCarrito('Guitarra con puente flotante(Avanzado)', 45000)">Agregar</button></li>
+        <li>Bajo eléctrico: $35.000 <button onclick="agregarAlCarrito('Bajo eléctrico(Avanzado)', 35000)">Agregar</button></li>
+      </ul>
+      <p>Nota: Las cuerdas no están incluidas en el servicio y deben ser proporcionadas por el cliente o adquiridas por un costo adicional.</p>
+      <p>Cualquier trabajo adicional requerido durante el servicio será evaluado y cotizado por separado.</p>
+    </div>
+    <div class="maintenance-plan">
+      <h2>Plan de Mantenimiento Avanzado Plus</h2>
+      <ul>
+        <li><strong>Servicio Elite de Calibración y Mantenimiento:</strong>
+          <ul>
+            <li>Limpieza a fondo y restauración completa del instrumento.</li>
+            <li>Tratamiento premium del diapasón con aceites de alta calidad.</li>
+            <li>Ajuste personalizado del alma con herramientas de precisión.</li>
+            <li>Ajuste avanzado de la acción y altura de las cuerdas para una experiencia de juego incomparable.</li>
+            <li>Octavación perfecta utilizando tecnología de última generación.</li>
+            <li>Inspección detallada y actualización de componentes electrónicos si es necesario.</li>
+            <li>Lubricación especializada de todos los componentes móviles.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3>Tarifas:</h3>
+      <ul>
+        <li>Guitarra eléctrica de puente fijo: $50.000 <button onclick="agregarAlCarrito('Guitarra eléctrica de puente fijo(Avanzado plus)', 50000)">Agregar</button></li>
+        <li>Guitarra acústica: $55.000 <button onclick="agregarAlCarrito('Guitarra acústica(Avanzado plus)', 55000)">Agregar</button></li>
+        <li>Guitarra con puente flotante: $60.000 <button onclick="agregarAlCarrito('Guitarra con puente flotante(Avanzado plus)', 60000)">Agregar</button></li>
+        <li>Bajo eléctrico: $50.000 <button onclick="agregarAlCarrito('Bajo eléctrico(Avanzado plus)', 50000)">Agregar</button></li>
+      </ul>
+      <p>Nota: Las cuerdas no están incluidas en el servicio y deben ser proporcionadas por el cliente o adquiridas por un costo adicional.</p>
+      <p>Cualquier trabajo adicional requerido durante el servicio será evaluado y cotizado por separado.</p>
+    </div>
+</div>
+
+<div class="contenedorcarito">
+  <div id="carrito" class="carrito">
+    <h2>Carrito de Compras</h2>
+    <ul id="listaCarrito">
+    </ul>
+    <p id="totalCarrito">Total: $0</p>
+    <p id="cantidadProductos">Cantidad de productos: 0</p>
+    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+  </div>
+</div>
+
+<script src="{% static 'js/calibracion.js' %}"></script>
+
+</body>
+</html>

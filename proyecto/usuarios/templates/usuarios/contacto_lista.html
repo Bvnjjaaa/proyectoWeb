@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Contactos</title>
+</head>
+<body>
+    <h1>Listado de Contactos</h1>
+    <ul>
+        {% for contacto in contactos %}
+        <li>{{ contacto.nombre }} {{ contacto.apellido }} - {{ contacto.correo }}
+            (<a href="{% url 'contacto_eliminar' contacto.id %}">Eliminar</a>)
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'contacto_nuevo' %}">Nuevo Contacto</a>
+    <a href="{% url 'index' %}">Volver a index</a>
+    <a href="{% url 'logout' %}">Cerrar sesion</a>
+</body>
+</html>
+
