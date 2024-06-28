@@ -133,3 +133,14 @@ body{
     margin-left: 100px; /* Ajusta el margen izquierdo para que coincida con el de los otros enlaces */
     margin-right: 100px; /* Ajusta el margen derecho para que coincida con el de los otros enlaces */
   }
+
+  .contenedorcarito{
+    margin-bottom: 20px;
+    background-color: rgb(201, 185, 160);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-left: 35%;
+    margin-right: 35%;
+  }

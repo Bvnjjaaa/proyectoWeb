@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect
-from django.contrib import messages
+from django.shortcuts import render
 
 def index(request):
     return render(request, 'web/index.html')
@@ -24,3 +23,10 @@ def nosotros(request):
 
 def blog(request):
     return render(request, 'web/blog.html')
+
+
+
+
+
+
+
