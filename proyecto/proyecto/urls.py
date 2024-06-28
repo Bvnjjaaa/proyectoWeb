@@ -36,7 +36,6 @@ urlpatterns = [
     path('listacontactos/', usuarios_views.contacto_list, name='contacto_lista'),
     path('agregarcontacto/', usuarios_views.contacto_nuevo, name='contacto_nuevo'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('agregar_al_carrito/', aplicacion_views.agregar_al_carrito, name='agregar_al_carrito'),
 ]
 
 

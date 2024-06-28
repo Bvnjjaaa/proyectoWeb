@@ -24,12 +24,3 @@ def nosotros(request):
 
 def blog(request):
     return render(request, 'web/blog.html')
-
-
-def agregar_al_carrito(request):
-    if request.method == 'POST':
-        producto_id = request.POST.get('producto_id')
-        messages.success(request, 'Producto agregado al carrito')
-        return redirect('index') 
-    else:
-        return redirect('index') 
