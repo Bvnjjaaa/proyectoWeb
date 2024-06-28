@@ -1,17 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clases de Guitarra - Estacion La Musa</title>
-    <link rel="stylesheet" href="{% static 'css/clasesdeguitarra.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/clasesdeguitarra.css' %}">
+    <script src="{% static 'js/carrito.js' %}"></script> <!-- Enlaza tu archivo JavaScript -->
 </head>
 <body>
   <div class="natbar">
     <div class="rectangulo1">
         <div class="logo-titulo">
-          <a href="{% url 'index' %}">
+          <a href="/">
             <img src="{% static 'img/logo.png' %}" alt="Descripción de la imagen">
           </a>
           <h1>Estacion La Musa</h1>
@@ -19,18 +20,18 @@
       </div>
       <div class="rectangulo2">
         <div class="links">
-          <a href="{% url 'index' %}">Menu</a>
+          <a href="/">Menu</a>
           <div class="dropdown">
-              <button class="dropbtn"><a href="{% url 'servicios' %}">Servicios</a></button>
+              <button class="dropbtn"><a href="/servicios/">Servicios</a></button>
               <div class="dropdown-content">
-                  <a href="{% url 'clasesguitarra' %}">Clases de guitarra</a>
-                  <a href="{% url 'calibracion' %}">Calibración de instrumentos</a>
-                  <a href="{% url 'salaensayo' %}">Sala de ensayo</a>
+                  <a href="/clasesguitarra/">Clases de guitarra</a>
+                  <a href="/calibracion/">Calibración de instrumentos</a>
+                  <a href="/salaensayo/">Sala de ensayo</a>
               </div>
           </div>
-          <a href="{% url 'galeria' %}">Galeria</a>
-          <a href="{% url 'nosotros' %}">Nosotros</a>
-          <a href="{% url 'blog' %}">Blog</a>
+          <a href="/galeria/">Galeria</a>
+          <a href="/nosotros/">Nosotros</a>
+          <a href="/blog/">Blog</a>
         </div>
       </div>
     </div> 
@@ -43,7 +44,11 @@
             <p>1 clase x $12.000 <br>
               4 clases x $42.000 <br>
               6 clases x $60.000</p>
-            <button onclick="agregarAlCarrito('Basico', 12000)">Agregar al carrito</button>
+            <form onsubmit="agregarAlCarrito('1'); return false;">
+                {% csrf_token %}
+                <input type="hidden" name="producto_id" value="1">
+                <button type="submit">Agregar al carrito</button>
+            </form>
           </div>
         <div class="maintenance-plan">
             <h1>Intermedio</h1>
@@ -52,6 +57,11 @@
             <p>1 clase x $12.000 <br>
               4 clases x $42.000 <br>
               6 clases x $60.000</p>
+            <form onsubmit="agregarAlCarrito('2'); return false;">
+                {% csrf_token %}
+                <input type="hidden" name="producto_id" value="2">
+                <button type="submit">Agregar al carrito</button>
+            </form>
           </div>
         <div class="maintenance-plan">
             <h1>Avanzado</h1>
@@ -60,7 +70,16 @@
             <p>1 clase x $12.000 <br>
               4 clases x $42.000 <br>
               6 clases x $60.000</p> 
+            <form onsubmit="agregarAlCarrito('3'); return false;">
+                {% csrf_token %}
+                <input type="hidden" name="producto_id" value="3">
+                <button type="submit">Agregar al carrito</button>
+            </form>
           </div>     
-      </div>    
+      </div>
+
+    <!-- Donde quieres mostrar el carrito -->
+    <div id="carrito"></div>
+    
 </body>
 </html>

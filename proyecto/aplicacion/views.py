@@ -1,28 +1,5 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Contacto
-from .forms import ContactoForm
-
-def contacto_list(request):
-    contactos = Contacto.objects.all()
-    return render(request, 'web/contacto_lista.html', {'contactos': contactos})
-
-def contacto_nuevo(request):
-    if request.method == 'POST':
-        form = ContactoForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('contacto_lista')
-    else:
-        form = ContactoForm()
-    
-    return render(request, 'web/contacto_agregar.html', {'form': form})
-
-def contacto_eliminar(request, id):
-    contacto = get_object_or_404(Contacto, id=id)
-    if request.method == 'POST':
-        contacto.delete()
-        return redirect('contacto_lista')
-    return render(request, 'web/contacto_confirmar_eliminar.html', {'contacto': contacto})
+from django.shortcuts import render, redirect
+from django.contrib import messages
 
 def index(request):
     return render(request, 'web/index.html')
@@ -48,3 +25,11 @@ def nosotros(request):
 def blog(request):
     return render(request, 'web/blog.html')
 
+
+def agregar_al_carrito(request):
+    if request.method == 'POST':
+        producto_id = request.POST.get('producto_id')
+        messages.success(request, 'Producto agregado al carrito')
+        return redirect('index') 
+    else:
+        return redirect('index') 

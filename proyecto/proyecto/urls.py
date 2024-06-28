@@ -15,23 +15,33 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from aplicacion import views
+from django.urls import path, include
+from aplicacion import views as aplicacion_views
+from usuarios import views as usuarios_views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('servicios/', views.servicios, name='servicios'),
-    path('clasesguitarra/', views.clasesguitarra, name='clasesguitarra'),
-    path('calibracion/', views.calibracion, name='calibracion'),
-    path('salaensayo/', views.salaensayo, name='salaensayo'),
-    path('galeria/', views.galeria, name='galeria'),
-    path('nosotros/', views.nosotros, name='nosotros'),
-    path('blog/', views.blog, name='blog'),
-    path('contacto/<int:id>/eliminar/', views.contacto_eliminar, name='contacto_eliminar'),
-    path('listacontactos/', views.contacto_list, name='contacto_lista'),
-    path('agregarcontacto/', views.contacto_nuevo, name='contacto_nuevo'),
+    path('', aplicacion_views.index, name='index'),
+    path('servicios/', aplicacion_views.servicios, name='servicios'),
+    path('clasesguitarra/', aplicacion_views.clasesguitarra, name='clasesguitarra'),
+    path('calibracion/', aplicacion_views.calibracion, name='calibracion'),
+    path('salaensayo/', aplicacion_views.salaensayo, name='salaensayo'),
+    path('galeria/', aplicacion_views.galeria, name='galeria'),
+    path('nosotros/', aplicacion_views.nosotros, name='nosotros'),
+    path('blog/', aplicacion_views.blog, name='blog'),
+    path('usuarios/', include('usuarios.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('contacto/<int:id>/eliminar/', usuarios_views.contacto_eliminar, name='contacto_eliminar'),
+    path('listacontactos/', usuarios_views.contacto_list, name='contacto_lista'),
+    path('agregarcontacto/', usuarios_views.contacto_nuevo, name='contacto_nuevo'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('agregar_al_carrito/', aplicacion_views.agregar_al_carrito, name='agregar_al_carrito'),
 ]
+
+
+
+
 
 
 
