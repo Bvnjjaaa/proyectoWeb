@@ -35,6 +35,7 @@ urlpatterns = [
     path('contacto/<int:id>/eliminar/', usuarios_views.contacto_eliminar, name='contacto_eliminar'),
     path('listacontactos/', usuarios_views.contacto_list, name='contacto_lista'),
     path('agregarcontacto/', usuarios_views.contacto_nuevo, name='contacto_nuevo'),
+    path('contacto/<int:id>/editar/', usuarios_views.contacto_editar, name='contacto_editar'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 ]
 

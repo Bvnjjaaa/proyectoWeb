@@ -9,13 +9,15 @@
     <ul>
         {% for contacto in contactos %}
         <li>{{ contacto.nombre }} {{ contacto.apellido }} - {{ contacto.correo }}
+            (<a href="{% url 'contacto_editar' contacto.id %}">Editar</a>)
             (<a href="{% url 'contacto_eliminar' contacto.id %}">Eliminar</a>)
         </li>
         {% endfor %}
     </ul>
     <a href="{% url 'contacto_nuevo' %}">Nuevo Contacto</a>
     <a href="{% url 'index' %}">Volver a index</a>
-    <a href="{% url 'logout' %}">Cerrar sesion</a>
+    <a href="{% url 'logout' %}">Cerrar sesión</a>
 </body>
 </html>
+
 

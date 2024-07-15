@@ -5,21 +5,26 @@ Benjamin Romero
 Nelson Mellado
 Daniel Gajardo
 
-1.
-user/key
+1.Instalar Django y iniciar proyecto en cmd
+
+1-Una vez ya parado en la carpeta del proyecto en la cmd.
+2-Escribe "entorno\scripts\actívate" y se activara el entorno virtual.
+3-Una vez en el entorno escribe "cd proyecto".
+4-Ya en la carpeta proyecto escribe "pip install -r requirements.txt" y eso  instalara en Django.
+5-Para arrancar el proyecto escribes "Python manage.py runserver".
+
+
+2.Usuario y Contraseña
+
 admin admin12345
 benromero romero1009
 
-2.
-urls:
-accounts/login dirige a iniciar sesión para ver el listado de contactos
-listadocontactos/ no podrá entrar si no inicia sesión
+3.URLS
 
-3.hice el logout pero me sale error 405, estuve toda la madrugada intentándolo arreglar y no pude:/
+1-"admin/" para ir a admin
+2-"" para ir al index de la aplicación
+3-"accounts/login/" para iniciar sesión para acceder al listado de contactos
+4-"listadocontactos" parar ir al listado de contactos
 
-4.Carrito de compra esta en calibración, servicios.
+    
 
-5.El inicio de sesión es para editar la información de contacto del formulario de índex.
-
-amen
-nodormi:(
