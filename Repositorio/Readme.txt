@@ -11,6 +11,8 @@ Daniel Gajardo
 2-Escribe "entorno\scripts\actívate" y se activara el entorno virtual.
 3-Una vez en el entorno escribe "cd proyecto".
 4-Ya en la carpeta proyecto escribe "pip install -r requirements.txt" y eso  instalara en Django.
+5-Una vez ya instalado Django se hace las migraciones primero 
+"python manage.py makemigrations" y después para aplicarlas en la BD "python manage.py migrate".
 5-Para arrancar el proyecto escribes "Python manage.py runserver".
 
 
